@@ -70,24 +70,6 @@ f.style.clipPath=`inset(${Math.random()*6}% 0 ${Math.random()*6}% 0)`;
 setTimeout(()=>f.style.clipPath="none",90);
 },3500);
 
-const video = document.getElementById("bgVideo");
-
-// Start muted so autoplay works
-video.muted = true;
-
-function enableAudio() {
-    video.muted = false;
-    video.volume = 1;
-
-    video.play().catch(err => console.log(err));
-
-    document.removeEventListener("click", enableAudio);
-    document.removeEventListener("keydown", enableAudio);
-}
-
-document.addEventListener("click", enableAudio);
-document.addEventListener("keydown", enableAudio);
-
 </script>
 
 </body></html>
